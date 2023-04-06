@@ -1,0 +1,23 @@
+# Auto Configuration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  cn.haidiiii.docker.DockerConfiguration
+
+# Bootstrap Configuration
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+  cn.haidiiii.docker.DockerConfigBootstrapConfiguration
+
+# Environment PostProcessor
+org.springframework.boot.env.EnvironmentPostProcessor=\
+  cn.haidiiii.docker.config.DockerConfigDataMissingEnvironmentPostProcessor
+
+org.springframework.boot.diagnostics.FailureAnalyzer=\
+  cn.haidiiii.docker.config.DockerConfigDataMissingEnvironmentPostProcessor.ImportExceptionFailureAnalyzer
+
+# ConfigData Location Resolvers
+org.springframework.boot.context.config.ConfigDataLocationResolver=\
+  cn.haidiiii.docker.config.DockerConfigDataLocationResolver
+
+# ConfigData Loaders
+org.springframework.boot.context.config.ConfigDataLoader=\
+  cn.haidiiii.docker.config.DockerConfigDataLoader
+
